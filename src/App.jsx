@@ -3,6 +3,7 @@ import {
   authEndpoint,
   clientId,
   redirectUri,
+  redirectUriP,
   scopes,
 } from "./HttpRequest/spotify_config";
 import hash from "./HttpRequest/hash";
@@ -24,7 +25,7 @@ function App() {
         //<button onClick={handleLogin}>Login Here</button>
         <a
           className=""
-          href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+          href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUriP}&scope=${scopes.join(
             "%20"
           )}&response_type=token&show_dialog=true`}
         >
